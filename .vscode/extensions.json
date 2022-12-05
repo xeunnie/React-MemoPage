@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "irongeek.vscode-env",
+    "clinyong.vscode-css-modules"
+  ],
+  "unwantedRecommendations": ["amatiasq.sort-imports"]
+}
