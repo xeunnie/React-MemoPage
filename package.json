@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start:dev": "react-scripts start",
+    "start": "react-scripts start",
     "prestart:prod": "yarn run build",
     "start:prod": "react-scripts start",
     "prebuild": "rimraf build",
@@ -24,6 +24,9 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
