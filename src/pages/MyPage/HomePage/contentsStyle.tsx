@@ -3,7 +3,7 @@ import { styled } from '@mui/material';
 import Input from 'src/components/Input';
 
 export const InputContainer = styled('div')({
-  backgroundColor: '#e8f8ff',
+  backgroundColor: '#FFFFFF',
   width: '100%',
   margin: '2rem',
   height: '10rem',

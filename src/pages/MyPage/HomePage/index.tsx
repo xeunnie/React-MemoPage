@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { InputAdornment } from '@mui/material';
 
 import AddButton from 'src/components/AddButton';
+import useTodo from 'src/hooks/myhooks/useTodo';
+import useTodoList from 'src/hooks/myhooks/useTodoList';
 
-import MultiFunctionButton from './components/ListItem/index';
+import MultiFunctionButton from './components/ListItem';
 import { ContentsArea, InputContainer, ListContainer, StyledInput } from './contentsStyle';
 import { Background, Header, Title } from './layoutStyle';
-import useTodo from '../../hooks/myhooks/useTodo';
-import useTodoList from '../../hooks/myhooks/useTodoList';
 
 export default function MyPage() {
   const useTodoHook = useTodo();
@@ -15,10 +15,10 @@ export default function MyPage() {
 
   const onClickAdd = () => {
     useTodoListingHook.addTodo(useTodoHook.todo);
-    console.log('addworking');
+    // console.log('addworking');
   };
 
-  const [editData, setEditData] = useState(0);
+  const [, setEditData] = useState(0);
   const onClickEdit = (selectedTodoIndex: number) => {
     setEditData(selectedTodoIndex);
     // editInput.open
