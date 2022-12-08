@@ -1,19 +1,15 @@
 import { BrowserRouter, Route, Routes as BaseRoutes } from 'react-router-dom';
 
-import Account from 'src/pages/Account';
-import AccountManage from 'src/pages/AccountManage';
-import Home from 'src/pages/Home';
-import MyPage from 'src/pages/MyPage';
-import NotFound from 'src/pages/NotFound';
+import MyPage from 'src/MyPageProject/pages/HomePage';
+import MEMO from 'src/MyPageProject/pages/MEMO';
+import PhotoDashboard from 'src/MyPageProject/pages/PhotoDashBoard';
 
 export default function Routes() {
   return (
     <BrowserRouter>
       <BaseRoutes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/accountmanage" element={<AccountManage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/memo" element={<MEMO />} />
+        <Route path="/photodashboard" element={<PhotoDashboard />} />
         <Route path="/" element={<MyPage />} />
       </BaseRoutes>
     </BrowserRouter>
