@@ -1,16 +1,17 @@
+import type { OutlinedInputProps } from '@mui/material';
+
 import { StyledTextInput } from './styled';
 import AddButton from '../AddButton';
 
-type InputProps = {
-  placeholder: string;
-  value: string;
+type InputProps = OutlinedInputProps & {
   onClick: () => void;
 };
 
-export default function Input({ value, placeholder, onClick }: InputProps) {
+export default function Input({ onClick }: InputProps) {
   return (
-    <StyledTextInput placeholder={placeholder} value={value}>
+    <>
+      <StyledTextInput />
       <AddButton click="ADD" onClickAdd={onClick} />
-    </StyledTextInput>
+    </>
   );
 }

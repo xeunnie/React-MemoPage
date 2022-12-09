@@ -1,25 +1,59 @@
 import { styled } from '@mui/material';
 
+import Drawer from 'src/MyPageProject/components/Layout/Drawer';
+
 export const Background = styled('div')({
-  backgroundColor: '#FFFFFF',
-  margin: '2rem',
+  backgroundColor: '#000000',
+  padding: '2rem',
   width: '1920px',
   height: '1080px',
   display: 'flex',
+  flexDirection: 'column',
   justifyContent: 'center',
 });
 
-export const Header = styled('div')({
-  backgroundColor: '#e8f8ff',
+export const ContentsArea = styled('div')({
+  backgroundColor: '#f0ffe8',
   width: '100%',
-  margin: '2rem',
-  height: '60rem',
+  height: '100%',
   display: 'flex',
+  flexDirection: 'row',
   justifyContent: 'center',
 });
 
-export const Title = styled('div')({
-  color: 'darkslateblue',
+export const DrawerArea = styled('div')({
   display: 'flex',
-  alignContent: 'center',
+  width: '20rem',
+});
+
+export const Drawers = styled(Drawer)({
+  display: 'flex',
+  width: '20rem',
+});
+
+export const BodyArea = styled('div')({
+  backgroundColor: '#feffe8',
+  width: '100%',
+  padding: '2rem',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  gridGap: '2rem',
+});
+
+export const ContentsContainer = styled('div')({
+  backgroundColor: '#dbd9ff',
+  padding: '2rem',
+  columnGap: '2rem',
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+});
+
+export const PendingContainer = styled('div')({
+  backgroundColor: '#ffd9e1',
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'flex-start',
+  flexDirection: 'column',
 });

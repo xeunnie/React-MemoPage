@@ -2,10 +2,17 @@ import { styled } from '@mui/material';
 
 export const AddButtonItem = styled('button')({
   backgroundColor: 'aliceblue',
-  width: '5rem',
-  height: '4rem',
+  padding: '1rem',
+  fontSize: '2rem',
   color: '#304552',
   borderRadius: '4rem',
-  border: '1px solid #6f7c85',
+  '&.MuiOutlinedInput-root': {
+    backgroundColor: 'aliceblue',
+  },
+  '&.Mui-focused': {
+    '&.MuiOutlinedInput-notchedOutline': {
+      border: '1px solid #304552',
+    },
+  },
   marginLeft: '1rem',
 });

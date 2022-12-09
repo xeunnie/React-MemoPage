@@ -1,10 +1,12 @@
 import { styled } from '@mui/material';
 
 export const StyledTextInput = styled('input')({
-  borderRadius: '0.8rem',
+  borderRadius: '3rem',
   backgroundColor: 'aliceblue',
   color: '#6f7c85',
   width: '100%',
+  padding: '2rem',
+  fontSize: '2rem',
   '&.MuiOutlinedInput-root': {
     backgroundColor: 'aliceblue',
   },

@@ -5,13 +5,31 @@ export const Header = styled('div')({
   padding: '2rem',
   height: '10rem',
   display: 'flex',
-  justifyContent: 'center',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
   alignContent: 'center',
 });
 
 export const Title = styled('div')({
   color: '#2d3647',
   display: 'flex',
-  verticalAlign: 'middle',
+  padding: '2rem',
   fontSize: '5.5rem',
+});
+
+export const ColorChangeBox = styled('div')({
+  display: 'grid',
+  gridTemplateColumns: '3rem 3rem 3rem 3rem',
+  gridTemplateRows: '2rem 2rem',
+  rowGap: '1rem',
+  columnGap: '1rem',
+  border: '1px solid royalblue',
+  backgroundColor: '#FFFFFF',
+  padding: '2rem',
+  justifyContent: 'left',
+});
+
+export const ColorChangeButton = styled('button')({
+  padding: '1rem',
+  backgroundColor: '#e8ffec',
 });
