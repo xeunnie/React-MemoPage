@@ -23,7 +23,7 @@ import {
   SubTitleText,
 } from './styled';
 
-export default function MEMO() {
+export default function Calendar() {
   const useTodoListingHook = useTodoList();
 
   const [todo, setTodo] = useState('');
@@ -52,7 +52,7 @@ export default function MEMO() {
         </DrawerArea>
         <BodyArea>
           <ContentsContainer>
-            <ContentsTitle title="MEMO" />
+            <ContentsTitle title="Calendar" />
             <InputContainer>
               <Input placeholder="Oh Happy Days" value={todo} onClick={onClickAdd} onChange={onChange} />
             </InputContainer>

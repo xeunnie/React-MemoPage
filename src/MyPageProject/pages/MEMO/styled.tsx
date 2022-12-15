@@ -52,7 +52,7 @@ export const BodyArea = styled('div')({
 export const ContentsContainer = styled('div')({
   backgroundColor: '#dbd9ff',
   padding: '2rem',
-  columnGap: '2rem',
+  gap: '2rem',
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
@@ -73,10 +73,33 @@ export const PendingContainer = styled('div')({
   justifyContent: 'flex-start',
   flexDirection: 'column',
   padding: '2rem',
+  gap: '2rem',
 });
 
 export const BoardContainer = styled('div')({
   backgroundColor: '#f2fae1',
+  padding: '2rem',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+});
+
+export const SubTitle = styled('div')({
+  padding: '1rem',
+  backgroundColor: '#fffdf2',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignContent: 'center',
+});
+
+export const SubTitleText = styled('div')({
+  padding: '2rem',
+  fontSize: '2rem',
+});
+
+export const SubList = styled('div')({
+  backgroundColor: '#c2ebff',
   padding: '2rem',
   height: '100%',
 });

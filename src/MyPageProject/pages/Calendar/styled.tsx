@@ -1,5 +1,7 @@
 import { styled } from '@mui/material';
 
+import Drawer from 'src/MyPageProject/components/Layout/Drawer';
+
 export const Background = styled('div')({
   backgroundColor: '#000000',
   padding: '2rem',
@@ -30,6 +32,11 @@ export const ContentsArea = styled('div')({
 export const DrawerArea = styled('div')({
   display: 'flex',
   backgroundColor: 'white',
+});
+
+export const Drawers = styled(Drawer)({
+  display: 'flex',
+  width: '20rem',
 });
 
 export const BodyArea = styled('div')({
@@ -65,41 +72,34 @@ export const PendingContainer = styled('div')({
   display: 'flex',
   justifyContent: 'flex-start',
   flexDirection: 'column',
-  gap: '2rem',
   padding: '2rem',
+  gap: '2rem',
 });
 
 export const BoardContainer = styled('div')({
   backgroundColor: '#f5f6ff',
   padding: '2rem',
   height: '100%',
-  gap: '2rem',
   display: 'flex',
   flexDirection: 'column',
 });
 
-export const BoardTitle = styled('div')({
+export const SubTitle = styled('div')({
+  padding: '1rem',
   backgroundColor: 'white',
-  padding: '2rem',
-  justifyContent: 'space-between',
   display: 'flex',
   flexDirection: 'row',
+  justifyContent: 'space-between',
   alignContent: 'center',
 });
 
-export const BoardTitleText = styled('div')({
-  fontSize: '3rem',
-  padding: '1rem',
-  display: 'flex',
+export const SubTitleText = styled('div')({
+  padding: '2rem',
+  fontSize: '2rem',
 });
 
-export const BoardTitleSearch = styled('div')({
-  display: 'flex',
-  flexDirection: 'row',
-});
-
-export const BoardBox = styled('div')({
-  backgroundColor: 'white',
+export const SubList = styled('div')({
+  backgroundColor: 'aliceblue',
   padding: '2rem',
   height: '100%',
 });

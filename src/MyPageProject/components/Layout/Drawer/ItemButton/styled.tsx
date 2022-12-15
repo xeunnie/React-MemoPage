@@ -6,16 +6,17 @@ export const ItemButtonContainer = styled('button')({
   justifyContent: 'space-between',
   alignItems: 'center',
   height: '4.8rem',
-  padding: '0 1.2rem 0 1.2rem',
+  padding: '1.2rem',
   cursor: 'pointer',
   border: 0,
+  backgroundColor: 'aliceblue',
 });
 
 export const ItemContainer = styled('div')({
   display: 'flex',
   justifyContent: 'flex-start',
   alignItems: 'center',
-  backgroundColor: '#fff9e8',
+  backgroundColor: 'aliceblue',
 });
 
 export const ItemTextContainer = styled('div')({
@@ -23,7 +24,7 @@ export const ItemTextContainer = styled('div')({
   justifyContent: 'center',
   alignItems: 'center',
   marginLeft: '0.4rem',
-  color: '#545453',
+  color: '#304552',
   font: 'Inter',
   fontSize: '1.5rem',
   textAlign: 'left',

@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 
 export const Header = styled('div')({
-  backgroundColor: '#e8f8ff',
+  backgroundColor: 'white',
   padding: '2rem',
   height: '10rem',
   display: 'flex',
@@ -15,6 +15,7 @@ export const Title = styled('div')({
   display: 'flex',
   padding: '2rem',
   fontSize: '5.5rem',
+  backgroundColor: '#f5f6ff',
 });
 
 export const ColorChangeBox = styled('div')({
@@ -24,6 +25,7 @@ export const ColorChangeBox = styled('div')({
   rowGap: '1rem',
   columnGap: '1rem',
   border: '1px solid royalblue',
+  borderRadius: '2rem',
   backgroundColor: '#FFFFFF',
   padding: '2rem',
   justifyContent: 'left',

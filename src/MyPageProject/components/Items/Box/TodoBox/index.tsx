@@ -11,7 +11,7 @@ type MultiFunctionButtonProps = {
   // category: string;
 };
 
-export default function MultiFunctionButton({ onClick, onClickDelete, onClickEdit, title }: MultiFunctionButtonProps) {
+export default function TodoBox({ onClick, onClickDelete, onClickEdit, title }: MultiFunctionButtonProps) {
   return (
     <ButtonContainer type="button" onClick={onClick}>
       <TextContainer>
