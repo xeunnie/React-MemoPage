@@ -2,21 +2,21 @@
 
 import { ColorChangeBox, ColorChangeButton, Header, Title } from './styled';
 
-import { ReactComponent as Star } from 'src/assets/svg/Star.svg';
-// import ColorButton from '../../Items/ColorButton';
+// import { ReactComponent as Star } from 'src/assets/svg/Star.svg';
+// // import ColorButton from '../../Items/ColorButton';
 
-type HeadProps = {
-  isActive: boolean;
-};
+// type HeadProps = {
+//   isActive: boolean;
+// };
 
-export default function Head({ isActive }: HeadProps) {
-  const onStar = () => isActive;
+export default function Head() {
+  // const onStar = () => isActive;
   return (
     <Header>
       <Title> Chloe Choi </Title>
-      {isActive ? <Star style={{ color: 'red' }} /> : <Star style={{ color: 'trasnparent' }} />}
+      {/* {isActive ? <Star style={{ color: 'red' }} /> : <Star style={{ color: 'trasnparent' }} />} */}
       <ColorChangeBox>
-        <ColorChangeButton style={{ backgroundColor: 'red' }} onClick={onStar} />
+        <ColorChangeButton style={{ backgroundColor: 'red' }} />
         <ColorChangeButton style={{ backgroundColor: 'orange' }} />
         <ColorChangeButton style={{ backgroundColor: 'yellow' }} />
         <ColorChangeButton style={{ backgroundColor: 'green' }} />

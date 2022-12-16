@@ -1,11 +1,14 @@
 import { useState } from 'react';
+import { Divider } from '@mui/material';
 
 import useTodoList from 'src/hooks/myhooks/useTodoList';
-import MultiFunctionButton from 'src/MyPageProject/components/Items/Box/TodoBox';
+import TodoBox from 'src/MyPageProject/components/Items/Box/TodoBox';
+import StyledDialog from 'src/MyPageProject/components/Items/Dialog';
 import AddInput from 'src/MyPageProject/components/Items/Inputs/AddInput';
 import SearchInput from 'src/MyPageProject/components/Items/Inputs/SearchInput';
 import ContentsTitle from 'src/MyPageProject/components/Layout/ContentsTitle';
-import Drawer from 'src/MyPageProject/components/Layout/Drawer';
+// import Drawer from 'src/MyPageProject/components/Layout/Drawer';
+import MiniDrawer from 'src/MyPageProject/components/Layout/Drawer/MiniDrawer';
 import Head from 'src/MyPageProject/components/Layout/Head';
 
 import {
@@ -22,6 +25,7 @@ import {
   InputContainer,
   ListContainer,
   PendingContainer,
+  TodoContainer,
 } from './styled';
 
 export default function HomePage() {
@@ -38,57 +42,61 @@ export default function HomePage() {
     // console.log('addworking');
   };
 
-  const [, setEditData] = useState(0);
-  const onClickEdit = (selectedTodoIndex: number) => {
-    setEditData(selectedTodoIndex);
-    // editInput.open
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
     <Background>
-      <Head isActive={false} />
+      <DrawerArea>
+        <MiniDrawer />
+      </DrawerArea>
+      <Divider orientation="vertical" color="#304552" />
+      <Divider orientation="horizontal" color="#304552" />
+      <Head />
       <ContentsArea>
-        <DrawerArea>
-          <Drawer />
-        </DrawerArea>
         <BodyArea>
+          <ContentsTitle title="Todo List" />
+          <Divider orientation="horizontal" color="#304552" />
           <ContentsContainer>
-            <ContentsTitle title="Todo List" />
-            <InputContainer>
-              <AddInput placeholder="Oh Happy Days" value={todo} onClick={onClickAdd} onChange={onChange} />
-            </InputContainer>
-            <ListContainer>
-              {useTodoListingHook.todoList.map((list, index) => (
-                <MultiFunctionButton
-                  key={index}
-                  onClick={() => onClickEdit(index)}
-                  title={list.todo}
-                  onClickEdit={() => onClickEdit}
-                  onClickDelete={() => useTodoListingHook.deleteTodo(index)}
-                />
-              ))}
-            </ListContainer>
+            <TodoContainer>
+              <InputContainer>
+                <AddInput placeholder="Oh Happy Days" value={todo} onClick={onClickAdd} onChange={onChange} />
+              </InputContainer>
+              <ListContainer>
+                {useTodoListingHook.todoList.map((list, index) => (
+                  <TodoBox key={index} text={list.todo} onClickDelete={() => useTodoListingHook.deleteTodo(index)} onClickEdit={handleClickOpen} />
+                ))}
+              </ListContainer>
+              {open && <StyledDialog text="Edit Todo" onClickOpen={open} onClickClose={handleClose} onClickSave={handleClose} />}
+            </TodoContainer>
+            <PendingContainer>
+              <BoardContainer>
+                <BoardTitle>
+                  <BoardTitleText>Finished List</BoardTitleText>
+                  <BoardTitleSearch>
+                    <SearchInput onClick={onClickAdd} />
+                  </BoardTitleSearch>
+                </BoardTitle>
+                <Divider orientation="horizontal" color="#9ba2eb" />
+                <BoardBox />
+              </BoardContainer>
+              <BoardContainer>
+                <BoardTitle>
+                  <BoardTitleText>Old List</BoardTitleText>
+                  <BoardTitleSearch>
+                    <SearchInput onClick={onClickAdd} />
+                  </BoardTitleSearch>
+                </BoardTitle>
+                <Divider orientation="horizontal" color="#9ba2eb" />
+                <BoardBox />
+              </BoardContainer>
+            </PendingContainer>{' '}
           </ContentsContainer>
-          <PendingContainer>
-            <BoardContainer>
-              <BoardTitle>
-                <BoardTitleText>Finished List</BoardTitleText>
-                <BoardTitleSearch>
-                  <SearchInput onClick={onClickAdd} />
-                </BoardTitleSearch>
-              </BoardTitle>
-              <BoardBox />
-            </BoardContainer>
-            <BoardContainer>
-              <BoardTitle>
-                <BoardTitleText>Old List</BoardTitleText>
-                <BoardTitleSearch>
-                  <SearchInput onClick={onClickAdd} />
-                </BoardTitleSearch>
-              </BoardTitle>
-              <BoardBox />
-            </BoardContainer>
-          </PendingContainer>
         </BodyArea>
       </ContentsArea>
     </Background>

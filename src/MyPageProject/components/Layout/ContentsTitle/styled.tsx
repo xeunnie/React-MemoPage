@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 
 export const Header = styled('div')({
-  backgroundColor: '#e1f4fa',
+  backgroundColor: 'aliceblue',
   padding: '2rem',
   height: '5rem',
   display: 'flex',

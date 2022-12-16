@@ -1,26 +1,24 @@
-import { ButtonContainer, IconBundle, TextContainer, Title } from './styled';
+import { ButtonContainer, DeleteIcon, EditIcon, IconBundle, TextContainer, Title } from './styled';
 
-import { ReactComponent as Delete } from 'src/assets/svg/Delete.svg';
-import { ReactComponent as Edit } from 'src/assets/svg/Edit.svg';
-
-type MultiFunctionButtonProps = {
-  onClick: () => void;
-  onClickEdit: () => void;
+type TodoBoxProps = {
   onClickDelete: () => void;
-  title: string;
+  onClickEdit: () => void;
+  text: string;
   // category: string;
 };
 
-export default function TodoBox({ onClick, onClickDelete, onClickEdit, title }: MultiFunctionButtonProps) {
+export default function TodoBox({ onClickDelete, onClickEdit, text }: TodoBoxProps) {
   return (
-    <ButtonContainer type="button" onClick={onClick}>
+    <ButtonContainer>
       <TextContainer>
-        <Title>{title}</Title>
+        <Title>{text}</Title>
         {/* <Category>{category}</Category> */}
       </TextContainer>
-      <IconBundle>
-        <Edit onClick={onClickEdit} />
-        <Delete onClick={onClickDelete} />
+      <IconBundle onClick={onClickEdit}>
+        <EditIcon />
+      </IconBundle>
+      <IconBundle onClick={onClickDelete}>
+        <DeleteIcon />
       </IconBundle>
     </ButtonContainer>
   );

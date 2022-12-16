@@ -33,19 +33,23 @@ export const DrawerArea = styled('div')({
 });
 
 export const BodyArea = styled('div')({
-  backgroundColor: 'aliceblue',
+  backgroundColor: 'white',
   width: '100%',
-  padding: '2rem',
   display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  gridGap: '2rem',
+  flexDirection: 'column',
+  justifyContent: 'flex-start',
 });
 
 export const ContentsContainer = styled('div')({
   backgroundColor: '#f5f6ff',
   padding: '2rem',
   gap: '2rem',
+  display: 'flex',
+  flexDirection: 'row',
+  height: '100%',
+});
+
+export const TodoContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
@@ -60,20 +64,19 @@ export const ListContainer = styled('div')({
 });
 
 export const PendingContainer = styled('div')({
-  backgroundColor: 'white',
+  backgroundColor: '#f5f6ff',
   width: '100%',
+
   display: 'flex',
   justifyContent: 'flex-start',
   flexDirection: 'column',
   gap: '2rem',
-  padding: '2rem',
 });
 
 export const BoardContainer = styled('div')({
   backgroundColor: '#f5f6ff',
-  padding: '2rem',
+  borderRadius: '2rem',
   height: '100%',
-  gap: '2rem',
   display: 'flex',
   flexDirection: 'column',
 });
@@ -89,8 +92,10 @@ export const BoardTitle = styled('div')({
 
 export const BoardTitleText = styled('div')({
   fontSize: '3rem',
-  padding: '1rem',
+  padding: '2rem',
   display: 'flex',
+  backgroundColor: '#f0f8ff',
+  borderRadius: '2rem',
 });
 
 export const BoardTitleSearch = styled('div')({

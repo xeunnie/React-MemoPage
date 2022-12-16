@@ -37,15 +37,15 @@ export default function MEMO() {
     // console.log('addworking');
   };
 
-  const [, setEditData] = useState(0);
-  const onClickEdit = (selectedTodoIndex: number) => {
-    setEditData(selectedTodoIndex);
-    // editInput.open
-  };
+  // const [, setEditData] = useState(0);
+  // const onClickEdit = (selectedTodoIndex: number) => {
+  //   setEditData(selectedTodoIndex);
+  //   // editInput.open
+  // };
 
   return (
     <Background>
-      <Head isActive={false} />
+      <Head />
       <ContentsArea>
         <DrawerArea>
           <Drawer />
@@ -63,13 +63,7 @@ export default function MEMO() {
                 <SearchInput onClick={onClickAdd} />
               </SubTitle>
               {useTodoListingHook.todoList.map((list, index) => (
-                <MultiFunctionButton
-                  key={index}
-                  onClick={() => onClickEdit(index)}
-                  title={list.todo}
-                  onClickEdit={() => onClickEdit}
-                  onClickDelete={() => useTodoListingHook.deleteTodo(index)}
-                />
+                <MultiFunctionButton key={index} text={list.todo} onClickDelete={() => useTodoListingHook.deleteTodo(index)} onClickEdit={onClickAdd} />
               ))}
             </ListContainer>
           </ContentsContainer>

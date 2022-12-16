@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
+import DeleteForeverTwoToneIcon from '@mui/icons-material/DeleteForeverTwoTone';
+import DriveFileRenameOutlineTwoToneIcon from '@mui/icons-material/DriveFileRenameOutlineTwoTone';
 
 export const ButtonContainer = styled('button')({
-  backgroundColor: '#ebfffe',
+  backgroundColor: '#f5f6ff',
   fontfamily: 'Inter500',
   borderRadius: '2rem',
   border: '1px solid #97a9cc',
@@ -31,15 +33,20 @@ export const Category = styled('div')({
 
 export const IconBundle = styled('button')({
   display: 'flex',
-  backgroundColor: '#edd9ff',
-  flexDirection: 'column',
-  columnGap: '0.5rem',
+  backgroundColor: '#9ba2eb',
   marginRight: '1.6rem',
   justifyContent: 'space-between',
-  height: '7rem',
-  '&.Mui-focused': {
-    '&.MuiOutlinedInput-notchedOutline': {
-      border: '1px solid #FFFFFF',
-    },
-  },
+  padding: '1rem',
+  borderRadius: '2rem',
+  border: 0,
+});
+
+export const DeleteIcon = styled(DeleteForeverTwoToneIcon)({
+  fontSize: 'large',
+  color: '#304552',
+});
+
+export const EditIcon = styled(DriveFileRenameOutlineTwoToneIcon)({
+  fontSize: 'large',
+  color: '#304552',
 });

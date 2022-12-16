@@ -1,9 +1,11 @@
 // import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ListItemText } from '@mui/material';
+import Divider from '@mui/material/Divider';
 
-import ItemButton from './ItemButton';
+// import ItemButton from './ItemButton';
 import Profile from './Profile';
-import { DrawerContainer, DrawerListContainer, ItemContainer, MenuContainer } from './styled';
+import { DrawerContainer, DrawerListContainer, MenuContainer, NavContainer, NavItem } from './styled';
 import ToggleButton from './Toggle';
 
 export default function Drawer() {
@@ -16,12 +18,24 @@ export default function Drawer() {
         <MenuContainer>
           <ToggleButton />
         </MenuContainer>
-        <ItemContainer>
-          <ItemButton onClick={() => navigate('/')}>- TODO List</ItemButton>
-          <ItemButton onClick={() => navigate('/calendar')}>- Calender</ItemButton>
-          <ItemButton onClick={() => navigate('/memo')}>- MEMO</ItemButton>
-          <ItemButton onClick={() => navigate('/photodashboard')}>- Photo Dashboard</ItemButton>
-        </ItemContainer>
+
+        <NavContainer>
+          <NavItem onClick={() => navigate('/')}>
+            <ListItemText primary="- TODO List" />
+          </NavItem>
+          <Divider />
+          <NavItem onClick={() => navigate('/calendar')}>
+            <ListItemText primary="- Calender" />
+          </NavItem>
+          <Divider />
+          <NavItem onClick={() => navigate('/memo')}>
+            <ListItemText primary="- MEMO" />
+          </NavItem>
+          <Divider />
+          <NavItem onClick={() => navigate('/photodashboard')}>
+            <ListItemText primary="- Photo Dashboard" />
+          </NavItem>
+        </NavContainer>
       </DrawerListContainer>
     </DrawerContainer>
   );

@@ -19,7 +19,7 @@ import {
 export default function PhotoDashboard() {
   return (
     <Background>
-      <Head isActive={false} />
+      <Head />
       <ContentsArea>
         <DrawerArea>
           <Drawer />

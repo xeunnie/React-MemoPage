@@ -23,7 +23,6 @@ export const InputContainer = styled('div')({
 
 export const ContentsArea = styled('div')({
   backgroundColor: 'aliceblue',
-  width: '100%',
   height: '100%',
   display: 'flex',
   flexDirection: 'row',
@@ -35,7 +34,7 @@ export const CalendarContainer = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  height: '100%',
+  justifyContent: 'flex-start',
 });
 
 export const CalendarBox = styled(Calendar)({
@@ -67,11 +66,9 @@ export const Drawers = styled(Drawer)({
 export const BodyArea = styled('div')({
   backgroundColor: 'aliceblue',
   width: '100%',
-  padding: '2rem',
   display: 'flex',
-  flexDirection: 'row',
+  flexDirection: 'column',
   justifyContent: 'center',
-  gridGap: '2rem',
 });
 
 export const ContentsContainer = styled('div')({
@@ -79,16 +76,8 @@ export const ContentsContainer = styled('div')({
   padding: '2rem',
   gap: '2rem',
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   width: '100%',
-});
-
-export const ListContainer = styled('div')({
-  backgroundColor: 'white',
-  display: 'flex',
-  height: '100%',
-  flexDirection: 'column',
-  overflow: 'auto',
 });
 
 export const PendingContainer = styled('div')({

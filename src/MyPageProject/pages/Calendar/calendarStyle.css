@@ -1,4 +1,9 @@
 
+   .react-calendar{
+      width: 100%;
+      height:100%
+   }
+
    .react-calendar__navigation__label__labelText{
     font-weight: bold;
    }
