@@ -1,3 +1,4 @@
+import { Calendar } from 'react-calendar';
 import { styled } from '@mui/material';
 
 import Drawer from 'src/MyPageProject/components/Layout/Drawer';
@@ -27,6 +28,30 @@ export const ContentsArea = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
+});
+
+export const CalendarContainer = styled('div')({
+  backgroundColor: 'white',
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+  height: '100%',
+});
+
+export const CalendarBox = styled(Calendar)({
+  backgroundColor: 'white',
+  color: '#304552',
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100%',
+  width: '100%',
+  borderRadius: '0.8rem',
+  boxShadow: '0 1.2rem 2.4rem rgba(0, 0, 0, 0.2)',
+  fontFamily: 'Arial',
+  fontSize: '2rem',
+  marginTop: '2rem',
+  padding: '2rem',
+  gap: '2rem',
 });
 
 export const DrawerArea = styled('div')({
