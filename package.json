@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start:dev": "react-scripts start",
+    "start": "react-scripts start",
     "prestart:prod": "yarn run build",
     "start:prod": "react-scripts start",
     "prebuild": "rimraf build",
@@ -24,15 +24,27 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@iconify/react": "^4.0.1",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.10.16",
+    "axios": "^1.2.1",
+    "date-fns": "^2.29.3",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-calendar": "^4.0.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
-    "sass": "^1.54.8"
+    "sass": "^1.54.8",
+    "styled-component": "^2.8.0"
   },
   "devDependencies": {
     "@types/node": "^16.11.56",
     "@types/react": "^18.0.18",
+    "@types/react-calendar": "^3.9.0",
     "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
     "eslint": "^8.23.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
